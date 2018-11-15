@@ -31,6 +31,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 
 group :development, :test do
   gem 'dotenv-rails'
