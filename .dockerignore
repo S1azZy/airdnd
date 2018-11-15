@@ -1,0 +1,5 @@
+config/master.key
+
+.env.*
+.env
+.gitignore
