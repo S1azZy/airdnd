@@ -11,7 +11,7 @@ class UserAuthentication < ApplicationRecord
       uid: params['uid'],
       token: params['credentials']['token'],
       token_expires_at: token_expires_at,
-      params: params,
+      params: params
     )
   end
 end

@@ -40,9 +40,9 @@ Rails.application.configure do
     address: 'smtp.mailgun.org',
     port: 587,
     authentication: 'plain',
-    domain: ENV.fetch("SMTP_DOMAIN"),
-    user_name: ENV.fetch("SMTP_USER"),
-    password: ENV.fetch("SMTP_PASSWORD")
+    domain: ENV.fetch('SMTP_DOMAIN'),
+    user_name: ENV.fetch('SMTP_USER'),
+    password: ENV.fetch('SMTP_PASSWORD')
   }
   
   # Print deprecation notices to the Rails logger.

@@ -9,7 +9,7 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '56666c3a6e65d60bd4af5b1ee36fe5cfa262bffd38e0aa703c81e35c1dc5220e023bc571054f5e37582a287702b8498bda4312192a5d6b9b5ceea85edc992520'
-  
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -257,9 +257,9 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
-  config.omniauth :facebook, ENV.fetch("FACEBOOK_APP_ID"), ENV.fetch("FACEBOOK_SECRET_KEY") , :display => "popup" , :scope => 'email,publish_actions', info_fields: 'email,name'
-  config.omniauth :twitter, ENV.fetch("TWITTER_APP_ID") , ENV.fetch("TWITTER_SECRET_KEY") , :display => "popup" , :scope => 'email'
-  
+  config.omniauth :facebook, ENV.fetch('FACEBOOK_APP_ID'), ENV.fetch('FACEBOOK_SECRET_KEY'), display: 'popup', scope: 'email,publish_actions', info_fields: 'email,name'
+  config.omniauth :twitter, ENV.fetch('TWITTER_APP_ID'), ENV.fetch('TWITTER_SECRET_KEY'), display: 'popup', scope: 'email'
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
