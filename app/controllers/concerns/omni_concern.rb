@@ -3,6 +3,7 @@ module OmniConcern
 
   def create
     auth_params = request.env['omniauth.auth']
+    console
     provider = AuthenticationProvider.get_provider_name(auth_params.try(:provider)).first
     authentication = provider.user_authentications.where(uid: auth_params.uid).first
     existing_user = User.where('email = ?', auth_params['info']['email']).try(:first)

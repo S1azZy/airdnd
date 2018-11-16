@@ -6,5 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-AuthenticationProvider.first_or_create(name: 'facebook')
-AuthenticationProvider.first_or_create(name: 'twitter')
+AuthenticationProvider.where(name: 'facebook').first_or_create!
+AuthenticationProvider.where(name: 'twitter').first_or_create!

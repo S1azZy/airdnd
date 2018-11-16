@@ -10,10 +10,22 @@ module OmniauthAttributesConcern
         email: email,
         first_name: name.split(' ').first,
         last_name: name.split(' ').last,
-        username: params.dig(:info, :nickname),
         password: Devise.friendly_token
       }
 
+      create(attributes)
+    end
+
+    def facebook(params)
+      email = params.dig(:info, :email).presence || "dummy#{SecureRandom.hex(15)}@dummy.com"
+  
+      attributes = {
+        email: email,
+        first_name: params.dig(:info, :first_name),
+        last_name: params.dig(:info, :last_name),
+        password: Devise.friendly_token
+      }
+  
       create(attributes)
     end
   end
