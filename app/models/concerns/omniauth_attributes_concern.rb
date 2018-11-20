@@ -10,6 +10,7 @@ module OmniauthAttributesConcern
         email: email,
         first_name: name.split(' ').first,
         last_name: name.split(' ').last,
+        image: params.dig(:info, :image),
         password: Devise.friendly_token
       }
 
@@ -23,7 +24,8 @@ module OmniauthAttributesConcern
         email: email,
         first_name: params.dig(:info, :first_name),
         last_name: params.dig(:info, :last_name),
-        password: Devise.friendly_token
+        password: Devise.friendly_token,
+        image: params.dig(:info, :image)
       }
   
       create(attributes)
