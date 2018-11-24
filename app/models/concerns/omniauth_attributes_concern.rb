@@ -14,7 +14,8 @@ module OmniauthAttributesConcern
         password: Devise.friendly_token
       }
 
-      create(attributes)
+      user = create(attributes)
+      user.skip_confirmation!
     end
 
     def facebook(params)
@@ -28,7 +29,8 @@ module OmniauthAttributesConcern
         image: params.dig(:info, :image)
       }
   
-      create(attributes)
+      user = create(attributes)
+      user.skip_confirmation!
     end
   end
 end
