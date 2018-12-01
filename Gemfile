@@ -33,6 +33,9 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 
+# Errors handling
+gem "sentry-raven"
+
 group :development, :test do
   gem 'dotenv-rails'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
