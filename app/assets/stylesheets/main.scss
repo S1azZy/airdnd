@@ -108,9 +108,11 @@ a {
   padding: 15px;
   margin: auto;
 }
+
 .form-signin .checkbox {
   font-weight: 400;
 }
+
 .form-signin .form-control {
   position: relative;
   box-sizing: border-box;
@@ -118,14 +120,17 @@ a {
   padding: 10px;
   font-size: 16px;
 }
+
 .form-signin .form-control:focus {
   z-index: 2;
 }
+
 .form-signin input[type="email"] {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
+
 .form-signin input[type="password"] {
   margin-bottom: 10px;
   border-top-left-radius: 0;
@@ -134,18 +139,36 @@ a {
 
 
 // AVATAR
-.avatar_small {
+.avatar-small {
   width: 20px;
 }
 
-.avatar_medium {
+.avatar-medium {
   width: 40px;
 }
 
-.avatar_large {
+.avatar-large {
   width: 60px;
 }
 
-.avatar_full {
+.avatar-full {
   width: 100%;
 }
+
+
+// CARDS
+
+.card .card-header {
+  color: #ffffff;
+  background-color: #00A699;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.description {
+  color: #575757;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+}
+

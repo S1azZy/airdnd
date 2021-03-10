@@ -1,8 +1,8 @@
 Raven.configure do |config|
-  if sentry_config.present?
-    project_id = ENV.fetch("SENTRY_PROJECT_ID")
-    project_key = ENV.fetch("SENTRY_PROJECT_KEY")
-    config.dsn = "https://#{project_key}@sentry.io/#{project_id}"
+  sentry_key = ENV.fetch("SENTRY_PROJECT_KEY", nil)
+  if sentry_key.present?
+    project_id = ENV.fetch("SENTRY_PROJECT_ID", nil)
+    config.dsn = "https://#{sentry_key}@sentry.io/#{project_id}"
   end
 
   config.environments = %w[production]

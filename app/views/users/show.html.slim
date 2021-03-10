@@ -1,0 +1,16 @@
+.row
+  .col-md-3
+    .center-block
+      = image_tag @user.avatar_url, class: 'avatar-full'
+      .card
+        .card-header Verification
+        .card-body
+          | Email
+          br
+          | Phone number
+
+  .col-md-9
+    h2
+      = @user.full_name
+    .description.mt-3.mb-3
+      = @user.description

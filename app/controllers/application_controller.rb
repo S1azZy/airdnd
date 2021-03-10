@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def set_raven_extra_context
+  def set_raven_context
     Raven.extra_context(params: params.to_unsafe_h, url: request.url, method: request.method)
     Raven.user_context(user_id: current_user&.id, ip: request.remote_ip)
   end

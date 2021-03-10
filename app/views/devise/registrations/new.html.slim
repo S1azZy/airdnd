@@ -1,24 +1,28 @@
-h2
-  | Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :email
-    br
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
+.text-center
+  = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'form-signin' }) do |f|
+    h1.h3.mb-3.font-weight-normal
+      | Please sign up
+    = devise_error_messages!
+    = f.label :email, class: 'sr-only'
+    = f.email_field :email, autofocus: true, autocomplete: 'email', required: true, placeholder: 'Email address', class: 'form-control'
+
+    = f.label :phone_number, class: 'sr-only'
+    = f.text_field :phone_number, autofocus: true, placeholder: 'Phone number', autocomplete: 'phone', class: 'form-control'
+
+    = f.label :description, class: 'sr-only'
+    = f.text_area :description, rows: 5, cols: 25, autofocus: true, placeholder: 'Description', class: 'form-control'
+
+
+    = f.label :password, class: 'sr-only'
     - if @minimum_password_length
       em
         | (
         = @minimum_password_length
         |  characters minimum)
-    br
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    br
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up", class: 'bnt btn-normal btn-block'
-= render "devise/shared/links"
+    = f.password_field :password, autocomplete: 'new-password', class: 'form-control', placeholder: 'Password', required: true
+
+    = f.label :password_confirmation, class: 'sr-only'
+    = f.password_field :password_confirmation, autocomplete: 'new-password', class: 'form-control', placeholder: 'Password confirm', required: true
+
+    = f.submit "Sign up", class: 'btn btn-lg btn-primary btn-block'
+  = render "devise/shared/links"
