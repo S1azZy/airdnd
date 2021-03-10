@@ -4,4 +4,11 @@ class AuthenticationProvider < ApplicationRecord
   has_many :user_authentications
 
   scope :get_provider_name, ->(provider_name) { where('name = ?', provider_name) }
+
+
+  validate :aololoasdasdasdasdasdasdasdasdasdasdasdasdasd
+
+  def aololoasdasdasdasdasdasdasdasdasdasdasdasdasd
+    [:aa, :bb, :cc, :aaaaa].empty?
+  end
 end
